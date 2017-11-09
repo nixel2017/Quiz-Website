@@ -1,5 +1,5 @@
 <h1>New Quiz</h1>
-
+<%= link_to 'Quiz List', controller: 'list' %>
 <p>
 <p>
   <form>
@@ -12,25 +12,21 @@
   <br>
   
   
-  </form>
-</p>
-
- 
-<p>
-  <form>
+  
   <strong>Question:</strong>
   <textarea name="question" rows="10" cols="30">Enter your Question
   </textarea>
   
   <br>
-  <input type="radio" name="optionA">A:<input type="text" name="optionAAnswer">
+  <input type="radio" name="option" value = "optionA">A:<input type="text" name="optionAAnswer">
   <br>
-  <input type="radio" name="optionB">B:<input type="text" name="optionBAnswer">
+  <input type="radio" name="option" value = "optionB">B:<input type="text" name="optionBAnswer">
   <br>
-  <input type="radio" name="optionC">C:<input type="text" name="optionCAnswer">
+  <input type="radio" name="option" value = "optionC">C:<input type="text" name="optionCAnswer">
   <br>
-  <input type="radio" name="optionD">D:<input type="text" name="optionDAnswer">
-  
+  <input type="radio" name="option" value = "optionD">D:<input type="text" name="optionDAnswer">
+  <br>
+  <input type="submit" name="create" class="submit">
   </form>
 </p>
 

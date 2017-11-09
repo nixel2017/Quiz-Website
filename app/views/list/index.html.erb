@@ -1,2 +1,21 @@
 <h1>Quiz List</h1>
 
+
+<%= link_to 'NewQuiz', controller: 'new_quiz' %>
+<table>
+    <tr>
+    <th>Title</th>
+    <th>Text</th>
+    </tr>
+    
+    
+    <% @quizzes.each do |quiz| %>
+    <tr>
+        <td><%= quiz.quizname %></td>
+        <td><%= quiz.topic %></td>
+        <td><%= link_to 'Show', quiz_path(quiz) %></td>
+        
+        
+    </tr>
+    <% end %>
+</table>
