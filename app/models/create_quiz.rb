@@ -1,0 +1,4 @@
+class CreateQuiz < ApplicationRecord
+
+end
+
