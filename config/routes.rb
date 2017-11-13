@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'new_quiz/index'
+
   get 'list/index'
 
   get 'quiz_list/index'

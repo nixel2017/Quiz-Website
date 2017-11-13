@@ -1,30 +1,25 @@
 class QuizController < ApplicationController
     def new
         
-    end
+   end
     
     def create
-        @quiz = Quiz.new(Quiz_params)
+        @quiz = CreateQuiz.new(Quiz_params)
         
-        
-        if @quiz.save
-           
-            redirect_to @quiz
-        else
-            render 'new'
-        end
+        @quiz.save
+        redirect_to @quiz
     end
     
     def show
-        @quiz = Quiz.find(params[:id])
+        @quiz = CreateQuiz.find(params[:id])
     end
     
     def index
-        @quiz = Quiz.all
+        @quizzes = CreateQuiz.all
     end
     
     def new
-       @quiz = Quiz.new 
+       @quiz = CreateQuiz.new 
     end
     
     def edit
@@ -50,6 +45,6 @@ end
 
 private
 def Quiz_params
-    params.require(:Quiz).permit(:title, :text)
+    params.require(:quiz).permit(:name, :topic, :question, :option, :optionAAnswer, :optionBAnswer, :optionCAnswer, :optionDAnswer)
 end
 
