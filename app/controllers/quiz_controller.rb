@@ -15,7 +15,7 @@ class QuizController < ApplicationController
     end
     
     def index
-        @quizzes = CreateQuiz.all
+        @quiz = CreateQuiz.all
     end
     
     def new
