@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20171109142514) do
 
   create_table "create_quizzes", force: :cascade do |t|
-    t.string "quizname"
+    t.string "name"
     t.string "topic"
     t.text "question"
     t.string "option"

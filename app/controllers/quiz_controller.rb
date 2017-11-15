@@ -5,12 +5,10 @@ class QuizController < ApplicationController
     def create
         @quiz = CreateQuiz.new(Quiz_params)
         
-       if @quiz.save
-         redirect_to @quiz
-     else
-         render new
-       end
+     @quiz.save
+     redirect_to @quiz
     end
+    
     
     def show
         @quiz = CreateQuiz.find(params[:id])

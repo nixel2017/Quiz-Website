@@ -1,16 +1,13 @@
 class NewQuizController < ApplicationController
-  class QuizController < ApplicationController
+ 
     def new
     end
     
     def create
         @quiz = CreateQuiz.new(Quiz_params)
         
-       if @quiz.save
-         redirect_to @quiz
-     else
-         render new
-       end
+     @quiz.save
+     redirect_to @quiz
     end
     
     def show
@@ -48,8 +45,7 @@ class NewQuizController < ApplicationController
 
 private
 def Quiz_params
-    params.require(:quiz).permit(:name, :topic, :question, :option, :optionAAnswer, :optionBAnswer, :optionCAnswer, :optionDAnswer)
+    params.require(:create_quizzes).permit(:name, :topic, :question, :option, :optionAAnswer, :optionBAnswer, :optionCAnswer, :optionDAnswer)
 end
 
 
-end
