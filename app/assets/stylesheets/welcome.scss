@@ -4,13 +4,20 @@
 
 h1 {
     font-size: 32px;
-    color: red;
+    color: #DEF2F1;
+    font-family: verdana;
+    text-align: center;
 }
 
 body{
     background: #14DB42;
 }
 
+a:link, a:visited {
+    text-decoration: none;
+    font-family: verdana;
+}
+    
 ul {
     list-style-type: none;
     margin: 0;

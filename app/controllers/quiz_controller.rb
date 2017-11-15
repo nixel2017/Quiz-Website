@@ -1,5 +1,5 @@
 class QuizController < ApplicationController
-   def new
+    def new
         
    end
     
