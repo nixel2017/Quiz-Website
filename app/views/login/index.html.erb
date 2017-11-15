@@ -1,6 +1,17 @@
 <%= link_to 'Login', controller: 'login' %> <br>
 <%= link_to 'Register', controller: 'register' %> <br>
 
-<%= link_to 'Quiz List', controller: 'list' %>
+<%= link_to 'Quiz List', controller: 'list' %> <br>
 <%= link_to 'NewQuiz', controller: 'new_quiz' %>
 <h1>Login</h1>
+
+<form>
+    <strong>Username:</strong>
+    <input = "text" name = "username">
+  <br>
+    <strong>Password:</strong>
+    
+    <input = "text" type="password" name = "password" >
+  <br>
+  <input type="submit" name="login" class="login">
+  </form>

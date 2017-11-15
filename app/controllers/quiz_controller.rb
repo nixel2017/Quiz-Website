@@ -1,13 +1,15 @@
 class QuizController < ApplicationController
     def new
-        
-   end
+    end
     
     def create
         @quiz = CreateQuiz.new(Quiz_params)
         
-        @quiz.save
-        redirect_to @quiz
+       if @quiz.save
+         redirect_to @quiz
+     else
+         render new
+       end
     end
     
     def show
