@@ -1,26 +1,27 @@
+<h1>Register</h1> <br>
 <%= link_to 'Login', controller: 'login' %> <br>
 <%= link_to 'Register', controller: 'register' %> <br>
 
 <%= link_to 'Quiz List', controller: 'list' %> <br>
 <%= link_to 'NewQuiz', controller: 'new_quiz' %> <br>
-<%= link_to 'Welcome', controller: 'welcome' %> <br>
-<h1>Register</h1>
+<%= link_to 'Welcome', controller: 'welcome' %> <br><br>
+
 
 
 <strong>Full Name:</strong>
-    <input = "text" name = "fullname">
+    <input = "text" name = "fullname" required>
   <br>
 <strong>Email:</strong>
-    <input = "text" name = "email">
+    <input = "text" name = "email" required>
   <br>
 <strong>Username:</strong>
-    <input = "text" name = "username">
+    <input = "text" name = "username" required>
   <br>
 <strong>Password:</strong>
-    <input = "text" type="password" name = "password" placeholder="Password">
+    <input = "text" type="password" name = "password" id = "password" placeholder="Password" required>
   <br>
 <strong>Retype Password:</strong>
-    <input = "text" type="password" name = "password"  placeholder="Confirm Password">
+    <input = "text" type="password" name = "password" id = "password"  placeholder="Confirm Password" required>
   <br>
   <input type="submit" name="login" class="login">
 </form>

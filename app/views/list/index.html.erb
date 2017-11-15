@@ -1,24 +1,9 @@
+<h1>Quiz List</h1> <br>
 <%= link_to 'Login', controller: 'login' %> <br>
 <%= link_to 'Register', controller: 'register' %> <br>
 
 <%= link_to 'Quiz List', controller: 'list' %> <br>
 <%= link_to 'NewQuiz', controller: 'new_quiz' %><br>
-<%= link_to 'Welcome', controller: 'welcome' %>
-<h1>Quiz List</h1>
+<%= link_to 'Welcome', controller: 'welcome' %> <br>
 
-<%= link_to 'NewQuiz', controller: 'new_quiz' %>
-<table>
-    <tr>
-    <th>Title</th>
-    <th>Text</th>
-    </tr>
-    
-    
-    <%= @quiz.each do |quiz| %>
-    <tr>
-        <td><%= quiz.quizname %></td>
-        <td><%= quiz.topic %></td>
-        <td><%= link_to 'Show', quiz_path(quiz) %></td>
-    </tr>
-    <% end %>
-</table>
+
