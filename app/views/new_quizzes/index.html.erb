@@ -1,0 +1,28 @@
+<h1>Quiz List</h1> <br>
+<%= link_to 'Login', controller: 'login' %> <br>
+<%= link_to 'Register', controller: 'register' %> <br>
+
+<%= link_to 'Quiz List', controller: 'new_quizzes' %> <br>
+<%= link_to 'New Quiz', controller: 'new_quizzes', action: 'new' %><br>
+<%= link_to 'Welcome', controller: 'welcome' %> <br>
+
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Topic</th>
+    </tr>
+    
+    <% @quiz.each do |new_quiz| %>
+    <tr>
+        <td><%= new_quiz.name %></td>
+        <td><%= new_quiz.topic %></td>
+        <td><%= link_to 'Show', new_quiz_path(new_quiz) %></td>
+        <td><%= link_to 'Edit', edit_new_quiz_path(new_quiz) %></td>
+        <td><%= link_to 'Destroy',
+                                new_quiz_path(new_quiz),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</table>

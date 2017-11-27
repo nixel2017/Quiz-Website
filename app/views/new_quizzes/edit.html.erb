@@ -1,0 +1,35 @@
+<h1>Edit Quiz</h1> <br>
+<%= link_to 'Login', controller: 'login' %> <br>
+<%= link_to 'Register', controller: 'register' %> <br>
+
+<%= link_to 'Quiz List', controller: 'new_quizzes' %> <br>
+<%= link_to 'NewQuiz', controller: 'new_quizzes' %><br>
+<%= link_to 'Welcome', controller: 'welcome' %> <br>
+
+
+
+ <%= form_for :new_quiz, url: new_quiz_path(@quiz), method: :patch do |f| %>
+ <p>
+   <%= f.label :name %> <%= f.text_field :name %>
+   <br>
+   <%= f.label :topic %> <%= f.text_field :topic %>
+   <br>
+   <%= f.label :question %> <%= f.text_area :question %>
+   <br>
+   <%= f.radio_button(:option, "optionA") %> <%= label_tag(:option_optionA, "A") %>
+   <%= f.text_field :optionAAnswer %>
+   <br>
+   <%= f.radio_button(:option, "optionB") %> <%= label_tag(:option_optionB, "B") %>
+   <%= f.text_field :optionBAnswer %>
+   <br>
+   <%= f.radio_button(:option, "optionC") %> <%= label_tag(:option_optionC, "C") %>
+   <%= f.text_field :optionCAnswer %>
+   <br>
+   <%= f.radio_button(:option, "optionD") %> <%= label_tag(:option_optionD, "D") %>
+   <%= f.text_field :optionDAnswer %>
+   <br>
+   <%= f.submit %>
+ </p>
+ <% end %>
+
+

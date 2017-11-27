@@ -1,0 +1,71 @@
+<%= link_to 'Login', controller: 'login' %> <br>
+<%= link_to 'Register', controller: 'register' %> <br>
+
+<%= link_to 'Quiz List', controller: 'new_quizzes' %>
+<%= link_to 'NewQuiz', controller: 'new_quizzes' %>
+ <p>
+ <strong>Quiz:</strong>
+ <%= @quiz.name %>
+ <br>
+  <strong>Topic:</strong>
+  <%= @quiz.topic %>
+  <br>
+  <strong>Question:</strong>
+  <%= @quiz.question %>
+   <br>
+   
+   <%= @quiz.option %> 
+   <%= @quiz.optionAAnswer %>
+   <br>
+   <%= @quiz.option %>
+   <%= @quiz.optionBAnswer %>
+   <br>
+   <%= @quiz.option %>
+   <%= @quiz.optionCAnswer %>
+   <br>
+   <%= @quiz.option %>
+   <%= @quiz.optionDAnswer %>
+   
+  <!--<% @quiz.questions.each do |question| %>-->
+  <!--<br> -->
+  <!-- <p>-->
+   
+  <!-- <%= question.question %>-->
+   
+  <!-- <%= question.option %>-->
+  <!-- <%= question.optionAAnswer %>-->
+   
+  <!-- <br>-->
+  <!-- <%= question.option %>-->
+  <!-- <%= question.optionBAnswer %>-->
+  <!-- <br>-->
+  <!-- <%= question.option %>-->
+  <!-- <%= question.optionCAnswer %>-->
+   
+  <!-- <br>-->
+  <!-- <%= question.optionDAnswer %>-->
+  <!-- <%= question.optionDAnswer %>-->
+  <!-- </p>-->
+  <!-- <br>-->
+  <!-- <br>-->
+  <!-- <h2>Add a Question: </h2>-->
+  <!-- <p><%= form_for([@quiz, @quiz.questions.build]) do |f| %>-->
+  <!--    <%= f.label :question %> <%= f.text_area :question %>-->
+  <!-- <br>-->
+  <!-- <%= f.radio_button(:option, "optionA") %> <%= label_tag(:option_optionA, "A") %>-->
+  <!-- <%= f.text_field :optionAAnswer %>-->
+  <!-- <br>-->
+  <!-- <%= f.radio_button(:option, "optionB") %> <%= label_tag(:option_optionB, "B") %>-->
+  <!-- <%= f.text_field :optionBAnswer %>-->
+  <!-- <br>-->
+  <!-- <%= f.radio_button(:option, "optionC") %> <%= label_tag(:option_optionC, "C") %>-->
+  <!-- <%= f.text_field :optionCAnswer %>-->
+  <!-- <br>-->
+  <!-- <%= f.radio_button(:option, "optionD") %> <%= label_tag(:option_optionD, "D") %>-->
+  <!-- <%= f.text_field :optionDAnswer %>-->
+  <!-- </p>-->
+   <% end %>
+   <% end %>
+  </p>
+  
+ 

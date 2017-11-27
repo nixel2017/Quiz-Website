@@ -7,3 +7,16 @@
 <%= link_to 'Welcome', controller: 'welcome' %> <br>
 
 
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Topic</th>
+    </tr>
+    
+    <% @quiz.each do |new_quiz| %>
+    <tr>
+        <td><%= new_quiz.name %></td>
+        <td><%= new_quiz.topic %></td>
+    </tr>
+    <% end %>
+</table>
